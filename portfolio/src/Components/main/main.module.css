@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    width: 100vw;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImage {   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    height: 320px;
+    
+}
+
+.image {
+    margin-right: 2rem;
+    height: 100%;
+    border-radius: 50%; 
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+   
+}
+.titleh4 { 
+    
+    font-weight: bolder;
+    color: #8B307F;
+}
+
+.titleh2 { 
+    font-weight: bolder;
+    color: #8B307F;
+   
+}
+.span{
+    font-weight: bolder;
+    color: black;
+}
+.iconGit{
+    margin-right: .7rem;
+}
+.modal{
+    display: flex;
+   justify-content: start;
+   margin-left: 2rem;
+}
+.card{
+    max-width: 530px;
+    margin:2rem;
+    margin-top: 0rem;
+    
+}
+
+.card p{
+  font-weight: lighter;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 736px)
+{
+    .container {
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+    .modal{
+        display: flex;
+       justify-content: center;
+       margin-right: 4rem;
+    }
+    .titleh4{
+        text-align: center;
+        margin-right: 2rem;
+    }
+    .card p{
+        font-weight: lighter;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+      }
+      .image {
+       
+        height: 80%;
+    
+    
+    }
+}
