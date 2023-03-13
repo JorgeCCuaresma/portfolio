@@ -1,3 +1,8 @@
+.navBar{
+    position: fixed;
+    display: inline;
+z-index: 2;
+}
 .fontpurple{
     color:#8B307F;
     font-weight:lighter

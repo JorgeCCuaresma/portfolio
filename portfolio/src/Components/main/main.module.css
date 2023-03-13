@@ -4,23 +4,46 @@
     min-height: 90vh;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
-.containerImage {   
+.containerCard {   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;    
+  
+    
+}
+.containerImage {   
+    
+    animation: leftright 1.5s ease-out;
+    justify-content: center;    
     height: 320px;
+    
     
 }
 
+ 
 .image {
+    
     margin-right: 2rem;
     height: 100%;
     border-radius: 50%; 
     color: #fff;
     margin-bottom: 2rem;
+    transition: transform 0.2s ease-in-out;
 }
+.image:hover{
+    transform: scale(1.1);
+}
+@keyframes leftright {
+    from {
+      transform: translate3d(-4000%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 
 .title{
     display: flex;
@@ -38,17 +61,49 @@
     color: #8B307F;
    
 }
+
+.titles{
+    animation: caida 1.7s ease-out;
+}
+@keyframes caida {
+    from {
+      transform: translate3d(0, -4000%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+.frase{
+    animation: rightleft 2.2s ease-out;
+    
+}
+@keyframes rightleft {
+    from {
+      transform: translate3d(2000%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 .span{
     font-weight: bolder;
     color: black;
 }
 .iconGit{
     margin-right: .7rem;
+    
+}
+.iconGit img{
+    transition: transform 0.2s ease-in-out;
+}
+.iconGit img:hover{
+    transform: scale(1.2);
 }
 .modal{
     display: flex;
    justify-content: start;
    margin-left: 2rem;
+   animation: subida 2.9s ease-out;
 }
 .card{
     max-width: 530px;
@@ -63,13 +118,26 @@
   margin-bottom: 2rem;
 }
 
+.containerIcons{
+    animation: subida 2.7s ease-out;
+}
+
+@keyframes subida {
+    from {
+      transform: translate3d(0, 6000%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
 @media only screen
 and (min-width: 320px)
 and (max-width: 736px)
 {
     .container {
         align-items: flex-start;
-        margin-top: 2rem;
+        margin-top: 5rem;
     }
     .modal{
         display: flex;
@@ -90,5 +158,34 @@ and (max-width: 736px)
         height: 80%;
     
     
+    }
+    .containerImage {      
+        animation: caida 2.2s ease-in-out;        
+    }
+    @keyframes caida {
+        from {
+          transform: translate3d(0, -1500%, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .frase{
+        animation: rightleft 2.8s ease-out;
+        text-align: justify;
+    }
+    @keyframes rightleft {
+        from {
+          transform: translate3d(1500%, 0, 0);
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .containerIcons{
+        animation: subida 3s ease-out;
+    }
+    .modal{
+        animation: subida 3.2s ease-out;
     }
 }
