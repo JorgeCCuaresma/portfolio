@@ -1,4 +1,9 @@
-.font{
-    color:#663b67;
+.fontpurple{
+    color:#8B307F;
+    font-weight:lighter
+  
+}
+.fontblack{
+    color:black;
     font-weight: bolder;
 }

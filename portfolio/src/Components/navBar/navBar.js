@@ -8,21 +8,21 @@ const NavigationBar = () => {
     return (
         <Navbar className={styles.navBar}  collapseOnSelect expand="lg" bg="light" >
             <Container  >
-                <Navbar.Brand  href="#home"><span className={styles.font}>Cuaresma Developer</span></Navbar.Brand>
+                <Navbar.Brand  href="/"><span className={styles.fontblack}>Cuaresma </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets"><span className={styles.font}>About</span></Nav.Link>
+                        
                         <Nav.Link href="#memes">
-                        <span className={styles.font}>Skills</span>
+                        <span className={styles.fontpurple}>Skills</span>
                         </Nav.Link>
-                        <Nav.Link href="#memes">
-                        <span className={styles.font}>Projects</span>
+                        <Nav.Link href="projects">
+                        <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
                         <Nav.Link  href="#memes">
-                        <span className={styles.font}>Contact</span>
+                        <span className={styles.fontpurple}>Contact</span>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
