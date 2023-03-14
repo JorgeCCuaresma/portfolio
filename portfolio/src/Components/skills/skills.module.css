@@ -31,23 +31,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out; 
+    border-radius: 5px;
+}
+.card:hover{
+    transform: scale(1.15);
 }
 
 .card img {
     height: 100px;
     margin-bottom: 1rem;
-    transition: transform 0.2s ease-in-out;    
+       
 }
-.card img:hover{
-    transform: scale(1.15);
-}
+
 
 .card p {
     color: #8B307F;
     font-weight: bolder;
 }
 .groupCard div {
-    margin-left: 0px;
+    margin-left: 20px;
    
 }
 
@@ -60,8 +65,18 @@
     }
 
     .card img {
-        height: 75px;
+        height: 68px;
     }
+    .card{
+        
+        padding: 0.5rem;
+    }
+    .groupCard div {
+        border-radius: 5px;
+        margin-left: 40px;
+        
+          
+       }
 }
 
 
@@ -99,8 +114,8 @@
         
     }
     .groupCard div {
-     margin-left: 20px;
-     margin-right: 50px;
+     margin-left: 12px;
+     margin-right: 25px;
        
     }
 }
