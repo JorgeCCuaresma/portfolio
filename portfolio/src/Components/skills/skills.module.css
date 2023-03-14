@@ -16,8 +16,19 @@
 .title p {
     font-weight: bolder;
     font-size: 1.1rem;
+   
 }
-
+.title{
+    animation: caida 2.2s ease-out;
+}
+@keyframes caida {
+    from {
+      transform: translate3d(0, -4000%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
 .containerCards {
     width: 70%;
     height: 70%;
@@ -35,7 +46,18 @@
     padding: 1rem;
     transition: transform 0.2s ease-in-out; 
     border-radius: 5px;
+    animation: rightleft 2.2s ease-out;
 }
+@keyframes rightleft {
+    from {
+      transform: translate3d(2000%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
 .card:hover{
     transform: scale(1.15);
 }
