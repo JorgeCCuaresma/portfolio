@@ -9,14 +9,16 @@
 .button{
     background-color: #8B307F;
     border: 0.5px solid #8B307F;
+    font-weight: bolder;
 }
 .body{        
-    font-family:Verdana, Geneva, Tahoma, sans-serif;   
+    text-align: justify;
 
 }
 .button:hover{
     background-color: white;
-    color: #663b67;
+    color: #8B307F;
+    font-weight: bolder;
     border: 0.5px solid #8B307F;
 }
 .card{

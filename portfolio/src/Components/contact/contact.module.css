@@ -1,0 +1,31 @@
+
+.fontpurple{
+    color:#8B307F;
+    font-weight:lighter
+  
+}
+.canvasTitle p{
+    color: #8B307F;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-justify: center;
+
+}
+
+
+.container{
+    margin-top: 10%;
+    height: fit-content;
+}
+.button{
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: #8B307F;
+    border: 0.5px solid #8B307F;
+    color: white;
+}
+.button:hover{
+    background-color: white;
+    color: #8B307F;
+    border: 0.5px solid #8B307F;
+}

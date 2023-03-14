@@ -101,7 +101,7 @@
 }
 .modal{
     display: flex;
-   justify-content: start;
+   justify-content: flex-start;
    margin-left: 2rem;
    animation: subida 2.9s ease-out;
 }
