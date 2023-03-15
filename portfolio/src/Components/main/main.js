@@ -5,6 +5,7 @@ import myphoto from '../../assets/photo.jpg'
 import ModalAbout from "../modalAbout/modalAbout";
 import github from '../../assets/github.png'
 import linkedin from '../../assets/linkedin.png'
+import Contact from "../contact/contact";
 
 
 const Main = () => {
@@ -30,6 +31,7 @@ const Main = () => {
                     </div>
                     <div className={styles.modal}>
                         <ModalAbout />
+                        <Contact/>
                     </div>
                 </div>
             </div>

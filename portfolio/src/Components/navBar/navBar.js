@@ -29,9 +29,6 @@ const NavigationBar = () => {
                         <Nav.Link href="projects">
                             <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
-                        <Nav.Link >
-                            <Contact />
-                        </Nav.Link>
                         <Nav.Link>
                             <ModalCurriculum />
                         </Nav.Link>
