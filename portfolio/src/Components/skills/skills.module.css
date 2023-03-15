@@ -64,6 +64,7 @@
 
 .card img {
     height: 100px;
+    width: 120px;
     margin-bottom: 1rem;
        
 }
@@ -74,7 +75,7 @@
     font-weight: bolder;
 }
 .groupCard div {
-    margin-left: 20px;
+    /* margin-left: 20px; */
    
 }
 
@@ -106,6 +107,7 @@
 @media only screen and (min-width: 320px) and (max-width: 736px) {
     .container {
         display: block;
+        margin-top: 6rem;
 
     }
 
@@ -124,7 +126,8 @@
     }
 
     .card img {
-        height: 75px;
+        height: 80px;
+        width: 100px;
     }
 
     .card {
@@ -136,8 +139,9 @@
         
     }
     .groupCard div {
-     margin-left: 12px;
-     margin-right: 25px;
+        margin-left: 40px;
+        margin-right: 40px;
        
     }
+    
 }

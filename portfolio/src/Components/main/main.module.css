@@ -137,7 +137,7 @@ and (max-width: 736px)
 {
     .container {
         align-items: flex-start;
-        margin-top: 5rem;
+        margin-top: 4rem;
     }
     .modal{
         display: flex;
@@ -156,6 +156,7 @@ and (max-width: 736px)
       .image {
        
         height: 80%;
+        margin-top: 2rem;
     
     
     }
