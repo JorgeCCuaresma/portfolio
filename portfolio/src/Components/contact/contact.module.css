@@ -25,15 +25,50 @@
     background-color: #8B307F;
     border: 0.5px solid #8B307F;
     color: white;
+    margin-right: 1rem;
 }
 .button:hover{
     background-color: white;
     color: #8B307F;
     border: 0.5px solid #8B307F;
 }
+
+.containerButton{
+    display: flex;
+    align-items: center;
+}
+.message{
+    padding: 0.4rem;
+    background-color: white;
+    color: #8B307F;
+    border: 0.5px solid #8B307F;
+    border-radius: 5px;
+    margin-left: 1rem;
+    animation: rightleft 1s ease-out;
+}
+.input{
+    margin-bottom: 1rem;   
+}
+
+
+@keyframes rightleft {
+    from {
+      transform: translate3d(130%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 @media (max-width:1280px) {
     .container{
         margin-top: 5%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px) {
+
+    .container{
+        margin-top: 60%;
     }
 }
 

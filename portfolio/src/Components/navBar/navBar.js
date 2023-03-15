@@ -9,7 +9,7 @@ import ModalCurriculum from '../../modalCurriculum/modalCurriculum';
 
 
 const NavigationBar = () => {
-    
+
     const simbol = '<'
     const simbol2 = '/>'
 
@@ -30,10 +30,10 @@ const NavigationBar = () => {
                             <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
                         <Nav.Link >
-                            <Contact/>
-                        </Nav.Link>                       
+                            <Contact />
+                        </Nav.Link>
                         <Nav.Link>
-                        <ModalCurriculum/>
+                            <ModalCurriculum />
                         </Nav.Link>
                     </Nav>
 
