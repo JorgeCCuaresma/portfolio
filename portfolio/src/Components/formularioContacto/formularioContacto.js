@@ -28,7 +28,7 @@ const FormularioContacto = (props) => {
     const sendEmail = (e) => {
         e.preventDefault();
         setLoading(true)
-        emailjs.sendForm('service_8glz861', 'template_v887hxo', form.current, 'Q8_7nmlQUEBVWtDpK')
+        emailjs.sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, form.current, process.env.REACT_APP_YOUR_PUBLIC_KEY)
             .then((result) => {
                 setLoading(false)
                 setResponse(result.text)
