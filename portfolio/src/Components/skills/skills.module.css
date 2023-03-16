@@ -102,6 +102,9 @@
     .container{
         height: 91.5vh;
     }
+    .containerDark{
+        height: 91.5vh;
+    }
     .containerCards {
 
         width: 70%;
@@ -135,7 +138,15 @@
         padding-bottom: 75rem;
 
     }
+    .containerDark {
+        display: block;
+        
+        width: 100vw;
+        height: 100vh;
+        padding-top: 5rem;
+        padding-bottom: 75rem;
 
+    }
     .containerCards {
         flex-wrap: wrap;
         width: 100%;
