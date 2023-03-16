@@ -154,10 +154,7 @@
 and (min-width: 320px)
 and (max-width: 736px)
 {
-    .container {
-        align-items: flex-start;
-        margin-top: 4rem;
-    }
+  
     .modal{
         display: flex;
        justify-content: center;
