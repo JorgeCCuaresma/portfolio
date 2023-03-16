@@ -23,16 +23,16 @@ const NavigationBar = () => {
 
         <Navbar fixed='top' collapseOnSelect expand="lg" bg={mode} >
             <Container  >
-                <Navbar.Brand href="/"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}>{simbol}Cuaresma {simbol2} </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
+                <Navbar.Brand href="/portfolio"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}>{simbol}Cuaresma {simbol2} </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/skills">
+                        <Nav.Link href="/portfolio/skills">
                             <span className={styles.fontpurple}>Skills</span>
                         </Nav.Link>
-                        <Nav.Link href="projects">
+                        <Nav.Link href="/portfolio/projects">
                             <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
                         <Nav.Link>
