@@ -25,8 +25,8 @@ const FormularioContacto = (props) => {
     }
 
 
-    const sendEmail = () => {
-
+    const sendEmail = (e) => {
+        e.preventDefault();
         setLoading(true)
         emailjs.sendForm('service_8glz861', 'template_v887hxo', form.current, 'Q8_7nmlQUEBVWtDpK')
             .then((result) => {
@@ -91,12 +91,12 @@ const FormularioContacto = (props) => {
                 </FloatingLabel>
             </Form.Group>
             <div className={styles.containerButton}>
-                <button className={styles.button} onClick={() => {
+                <button className={styles.button} onClick={(e) => {
                     if (!name || !email || !text) {
                         setEmpty("Hay campos sin rellenar")
                         return
                     }
-                    sendEmail()
+                    sendEmail(e)
                 }}>
                     {loading ? (<>Sending < Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /></>) : 'Submit'}
                 </button>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { getDarkMode } from '../../utils/localStorageUtils';
 import styles from './modalAbout.module.css'
 
 function ModalAbout() {
@@ -20,7 +21,7 @@ function ModalAbout() {
                 centered
                
             >
-                <div className={styles.card}>
+                <div className={getDarkMode() ? styles.cardDark : styles.card} >
                 <Modal.Header closeButton/>
                 <Modal.Body className={styles.body}><h5>Hola de nuevo 🖖, me presento soy Jorge Cuesta y soy desarrollador full stack junior.<br /><br />
                     Los proyectos en los que he trabajado incluyen experiencia en desarrollo web con tecnologías como HTML, CSS, JavaScript, utilizando librerias como React,

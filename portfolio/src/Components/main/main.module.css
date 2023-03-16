@@ -1,10 +1,20 @@
-.container {
+.containerdark {
     display: flex;
     width: 100vw;
-    min-height: 90vh;
+    height: 96.7vh; 
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    background-color: #212529;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  min-height: 96.7vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #f8f9fa
 }
 
 .containerCard {   
@@ -77,6 +87,11 @@
     animation: rightleft 2.2s ease-out;
     
 }
+.frasewhite{
+  color: #fff;
+  animation: rightleft 2.2s ease-out;
+    
+}
 @keyframes rightleft {
     from {
       transform: translate3d(2000%, 0, 0);
@@ -88,6 +103,10 @@
 .span{
     font-weight: bolder;
     color: black;
+}
+.spanwhite{
+  font-weight: bolder;
+  color: white;
 }
 .iconGit{
     margin-right: .7rem;
@@ -175,6 +194,11 @@ and (max-width: 736px)
         animation: rightleft 2.8s ease-out;
         text-align: justify;
     }
+    .frasewhite{
+      color: #fff;
+      animation: rightleft 2.8s ease-out;
+      text-align: justify;
+  }
     @keyframes rightleft {
         from {
           transform: translate3d(1500%, 0, 0);
@@ -189,4 +213,9 @@ and (max-width: 736px)
     .modal{
         animation: subida 3.2s ease-out;
     }
+}
+@media (max-width:1280px) {
+  .containerdark{
+   height: 94.4vh;
+  }
 }

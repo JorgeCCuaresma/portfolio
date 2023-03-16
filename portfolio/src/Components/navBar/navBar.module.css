@@ -12,3 +12,22 @@ z-index: 2;
     color:black;
     font-weight: bolder;
 }
+.luna{
+    width: 24px;
+    height:24px;
+    margin-bottom: 0.1rem;
+}
+.fontblack{
+    color:black;
+    font-weight: bolder;
+}.fontwhite{
+    color:white;
+    font-weight: bolder;
+}
+.sol{
+   
+    color: white;
+    width: 24px;
+    height:24px;
+    margin-bottom: 0.1rem;
+}

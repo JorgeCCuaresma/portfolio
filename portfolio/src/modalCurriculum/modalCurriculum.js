@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import curriculum from '../assets/curriculum.pdf'
 import curriculum2 from '../assets/curriculum2.png'
 import styles from './modalCurriculum.module.css'
+import { getDarkMode } from '../utils/localStorageUtils';
 
 const ModalCurriculum = () => {
     const [show, setShow] = useState(false);
@@ -31,7 +32,7 @@ const ModalCurriculum = () => {
                 keyboard={false}
                 centered
             >
-                <div className={styles.card}>
+                <div className={getDarkMode() ? styles.cardDark : styles.card}>
                     <Modal.Header className={styles.title} closeButton>
                         <Modal.Title><p>Curriculum Vitae Jorge Cuesta</p></Modal.Title>
                     </Modal.Header>

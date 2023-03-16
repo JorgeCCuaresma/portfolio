@@ -1,10 +1,21 @@
-.container {
+.containerDark {
     display: flex;
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 100vw;
-    height: 85vh;
+    height: 94.9vh;
     align-items: center;
     justify-content: space-around;
+    background-color: #212529;
+}
+.container{
+    display: flex;
+    margin-top: 3rem;
+    width: 100vw;
+    height: 94.9vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f8f9fa
+   
 }
 
 .title h1 {
@@ -13,9 +24,15 @@
     margin-bottom: 0rem;
 }
 
-.title p {
+.fontblack {
     font-weight: bolder;
     font-size: 1.1rem;
+   
+}
+.fontwhite {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: white;
    
 }
 .title{
@@ -34,7 +51,7 @@
     height: 70%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;    
 }
 
 .card {
@@ -82,13 +99,17 @@
 
 
 @media (max-width:1280px) {
+    .container{
+        height: 91.5vh;
+    }
     .containerCards {
 
         width: 70%;
     }
 
     .card img {
-        height: 68px;
+        height: 70px;
+        width: 90px;
     }
     .card{
         
@@ -107,7 +128,11 @@
 @media only screen and (min-width: 320px) and (max-width: 736px) {
     .container {
         display: block;
-        margin-top: 6rem;
+        
+        width: 100vw;
+        height: 100vh;
+        padding-top: 5rem;
+        padding-bottom: 75rem;
 
     }
 
@@ -117,6 +142,7 @@
     }
 
     .title h1 {
+  
         text-align: center;
 
     }

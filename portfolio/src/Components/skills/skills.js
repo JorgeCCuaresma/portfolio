@@ -9,16 +9,17 @@ import insomnia from '../../assets/Insomnia-Logo-1.png'
 import docker from '../../assets/docker.png'
 import mongoose from '../../assets/mongoose.png'
 import socket from '../../assets/socket.png'
+import { getDarkMode } from '../../utils/localStorageUtils'
 
 
 const Skills = () => {
 
     return (
-        <div className={styles.container}>
+        <div className={getDarkMode() ? styles.containerDark : styles.container}>
 
             <div className={styles.title}>
                 <h1>Skills</h1>
-                <p>Technologies</p>
+                <p className={getDarkMode() ? styles.fontwhite : styles.fontblack}>Technologies</p>
             </div>
             <div className={styles.containerCards}>
                 <div>

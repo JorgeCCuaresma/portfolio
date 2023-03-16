@@ -3,10 +3,11 @@ import todoApp from '../../assets/todoapp.mp4'
 import skuadLack from '../../assets/skuadlack1.mp4'
 import logoSkuadlack from '../../assets/logoSkuadLack.png'
 import publicChat from '../../assets/publicChat.mp4'
+import { getDarkMode } from '../../utils/localStorageUtils'
 const Projects = () => {
 
     return (
-        <div className={styles.container}>
+        <div className={getDarkMode() ? styles.containerDark : styles.container}>
             <h1>Projects</h1>
             <div className={styles.containerCards}>
                 <div className={styles.cards}>

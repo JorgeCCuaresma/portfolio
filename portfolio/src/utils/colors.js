@@ -1,0 +1,1 @@
+export const darkmode = '#212529';

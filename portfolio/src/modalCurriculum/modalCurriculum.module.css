@@ -21,14 +21,18 @@
     box-shadow: 0px 0px 10px #8B307F;
     width: fit-content;
 }
+.cardDark{
+    box-shadow: 0px 0px 10px #8B307F;
+    background-color: #212529;
+}
 .card{
     box-shadow: 0px 0px 10px #8B307F;
+    background-color: #f8f9fa
 }
 .body{
     display: flex;
-    height: fit-content;
     justify-content: center;
-    width: fit-content;
+   
 }
 .title{
     height: 80px;
