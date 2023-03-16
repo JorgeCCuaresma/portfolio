@@ -29,10 +29,10 @@ const NavigationBar = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/portfolio/skills">
+                        <Nav.Link href="/skills">
                             <span className={styles.fontpurple}>Skills</span>
                         </Nav.Link>
-                        <Nav.Link href="/portfolio/projects">
+                        <Nav.Link href="/projects">
                             <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
                         <Nav.Link>
