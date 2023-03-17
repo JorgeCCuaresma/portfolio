@@ -4,14 +4,18 @@ import skuadLack from '../../assets/skuadlack1.mp4'
 import logoSkuadlack from '../../assets/logoSkuadLack.png'
 import publicChat from '../../assets/publicChat.mp4'
 import { getDarkMode } from '../../utils/localStorageUtils'
-const Projects = () => {
+import { useDarkModeContext } from '../../context/contextDarkMode'
 
+
+
+const Projects = () => {
+    const { triger, setTriger } = useDarkModeContext()
     return (
         <div className={getDarkMode() ? styles.containerDark : styles.container}>
             <h1>Projects</h1>
             <div className={styles.containerCards}>
                 <div className={styles.cards}>
-                    <video src={skuadLack} type="video/mp4" autoPlay loop muted controls/>
+                    <video src={skuadLack} type="video/mp4" autoPlay loop muted controls />
                     <div className={styles.description}>
                         <h3><img width='40' src={logoSkuadlack} />SkuadLack</h3>
                         <p className={styles.frase}>SkuadLack es un clon con personalidad propia de Slack que permite la comunicación entre organizaciones teniendo la posibilidad de crear chats independientes dentro de los usuarios de una organización o canales temáticos para diferentes usuarios
@@ -30,7 +34,7 @@ const Projects = () => {
 
                 </div>
                 <div className={styles.cards}>
-                    <video src={publicChat} type="video/mp4" autoPlay loop muted controls/>
+                    <video src={publicChat} type="video/mp4" autoPlay loop muted controls />
                     <div className={styles.description}>
                         <h3>Public Chat</h3>
                         <p className={styles.frase}>Pequeña demo de chat con conexión por websocket que desarrolle en el proyecto que teníamos en equipo, la librería utilizada es socket.io tanto para front como para back, los componentes utilizados son mediante ReactJs, y el servidor es de ExpressJS con una MongoDB y Mongoose como librería de conexión contra esta.
@@ -44,7 +48,7 @@ const Projects = () => {
 
                 </div>
                 <div className={styles.cards}>
-                    <video src={todoApp} type="video/mp4" autoPlay loop muted controls/>
+                    <video src={todoApp} type="video/mp4" autoPlay loop muted controls />
                     <div className={styles.description}>
                         <h3>To-Do App</h3>
                         <p className={styles.frase}>My To-Do App es uno de los primeros retos que desarrolle en el bootcamp, usando para la parte front-end, componentes funcionales mediante ReactJS, y para la parte back-end una pequeña API REST de ExpressJS, con conexión a un contenedor de docker con bbdd de Mongo y Mongoose como libreria de conexión contra esta.</p>

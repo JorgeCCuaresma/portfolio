@@ -7,11 +7,13 @@ import luna from '../../assets/luna.png';
 import sol from '../../assets/sol.png'
 import { deleteStorageObject, getDarkMode, setStorageObject } from '../../utils/localStorageUtils';
 import Contact from '../contact/contact';
+import { useState } from 'react';
+import { useDarkModeContext } from '../../context/contextDarkMode';
 
 
 
-const NavigationBar = () => {
-
+const NavigationBar = (props) => {
+    const { triger, setTriger } = useDarkModeContext();
     const simbol = '<'
     const simbol2 = '/>'
     let mode
@@ -45,16 +47,18 @@ const NavigationBar = () => {
                                     src={sol}
                                     onClick={() => {
                                         deleteStorageObject('dark-mode')
-                                        window.location.reload(true);
+                                        setTriger(!triger)
+                                        // props.setReload(!props.reload)
                                     }}
                                 />
-                                : <img 
-                                className={styles.luna} 
-                                src={luna} 
-                                onClick={() => {
-                                    setStorageObject('dark-mode', { 'darkMode': 'yes' })
-                                    window.location.reload(true);
-                                }} 
+                                : <img
+                                    className={styles.luna}
+                                    src={luna}
+                                    onClick={() => {
+                                        setStorageObject('dark-mode', { 'darkMode': 'yes' })
+                                        setTriger(!triger)
+                                        // props.setReload(!props.reload)
+                                    }}
                                 />
                             }
                         </Nav.Link>

@@ -14,17 +14,19 @@
 
 
 .containerDark{
+    background-color: #212529 !important;
     margin-top: 10%;
     height: fit-content;
     box-shadow: 0px 0px 10px #8B307F;
-    background-color: #212529;
+   
    
 }
 .container{
+    background-color: #f8f9fa !important;
     margin-top: 10%;
     height: fit-content;
     box-shadow: 0px 0px 10px #8B307F;
-    background-color: #f8f9fa
+    
    
 }
 

@@ -10,10 +10,11 @@ import docker from '../../assets/docker.png'
 import mongoose from '../../assets/mongoose.png'
 import socket from '../../assets/socket.png'
 import { getDarkMode } from '../../utils/localStorageUtils'
+import { useDarkModeContext } from '../../context/contextDarkMode'
 
 
 const Skills = () => {
-
+    const { triger, setTriger } = useDarkModeContext()
     return (
         <div className={getDarkMode() ? styles.containerDark : styles.container}>
 

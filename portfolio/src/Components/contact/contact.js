@@ -12,14 +12,19 @@ const Contact = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
+    let mode
+    getDarkMode()
+        ? mode = 'dark'
+        : mode = 'light'
 
 
 
     return (
         <>
-            <button onClick={handleShow} className={styles.button2}>Contact 📧</button>
-            <Offcanvas className={getDarkMode() ? styles.containerDark : styles.container} show={show} placement='end' onHide={handleClose}>
+            <div>
+                <button onClick={handleShow} className={styles.button2}>Contact 📧</button>
+            </div>
+            <Offcanvas bg={mode} className={getDarkMode() ? styles.containerDark : styles.container} show={show} placement='end' onHide={handleClose}>
                 <div className={styles.card}>
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title className={styles.canvasTitle}><p>Contact Me</p></Offcanvas.Title>
