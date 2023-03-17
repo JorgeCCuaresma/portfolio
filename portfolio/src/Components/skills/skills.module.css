@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: #212529;
+    overflow: hidden;
 }
 .container{
     display: flex;
@@ -14,7 +15,8 @@
     height: 94.9vh;
     align-items: center;
     justify-content: space-around;
-    background-color: #f8f9fa
+    background-color: #f8f9fa;
+    overflow: hidden;
    
 }
 
@@ -50,6 +52,7 @@
     width: 70%;
     height: 70%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;    
 }
