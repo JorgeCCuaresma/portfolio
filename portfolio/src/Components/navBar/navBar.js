@@ -9,11 +9,18 @@ import { deleteStorageObject, getDarkMode, getIdioma, setStorageObject } from '.
 import spain from '../../assets/spain.png';
 import english from '../../assets/english.png'
 import { useDarkModeContext } from '../../context/contextDarkMode';
+import { useState } from 'react';
 
 
 
 const NavigationBar = () => {
     const { triger, setTriger } = useDarkModeContext();
+    const [expanded, setExpanded] = useState(false);
+
+    const handleLinkClick = () => {
+      setExpanded(!expanded);
+    };
+
     const simbol = '<'
     const simbol2 = '/>'
     let mode
@@ -23,10 +30,10 @@ const NavigationBar = () => {
 
     return (
 
-        <Navbar fixed='top' collapseOnSelect expand="lg" bg={mode} >
+        <Navbar fixed='top' collapseOnSelect expanded={expanded} expand="lg" bg={mode} >
             <Container  >
                 <Navbar.Brand href="/"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}>{simbol}Cuaresma {simbol2} </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle onClick={()=>handleLinkClick()} aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
@@ -48,7 +55,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         deleteStorageObject('dark-mode')
                                         setTriger(!triger)
-                                        // props.setReload(!props.reload)
+                                        handleLinkClick()                        
                                     }}
                                 />
                                 : <img
@@ -57,7 +64,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         setStorageObject('dark-mode', { 'darkMode': 'yes' })
                                         setTriger(!triger)
-                                        // props.setReload(!props.reload)
+                                        handleLinkClick()                                      
                                     }}
                                 />
                             }
@@ -69,7 +76,8 @@ const NavigationBar = () => {
                                     src={english}
                                     onClick={() => {
                                         deleteStorageObject('idioma')
-                                        setTriger(!triger)                                   
+                                        setTriger(!triger)  
+                                        handleLinkClick()                                 
                                     }}
                                 />
                                 : <img
@@ -77,7 +85,8 @@ const NavigationBar = () => {
                                     src={spain}
                                     onClick={() => {
                                         setStorageObject('idioma', { 'idioma': 'spain' })
-                                        setTriger(!triger)                                      
+                                        setTriger(!triger)  
+                                        handleLinkClick()                                    
                                     }}
                                 />
                             }
