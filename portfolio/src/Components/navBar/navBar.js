@@ -17,10 +17,6 @@ const NavigationBar = () => {
     const { triger, setTriger } = useDarkModeContext();
     const [expanded, setExpanded] = useState(false);
 
-    const handleLinkClick = () => {
-      setExpanded(!expanded);
-    };
-
     const simbol = '<'
     const simbol2 = '/>'
     let mode
@@ -33,7 +29,7 @@ const NavigationBar = () => {
         <Navbar fixed='top' collapseOnSelect expanded={expanded} expand="lg" bg={mode} >
             <Container  >
                 <Navbar.Brand href="/"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}>{simbol}Cuaresma {simbol2} </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
-                <Navbar.Toggle onClick={()=>handleLinkClick()} aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle onClick={()=>setExpanded(!expanded)} aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
@@ -45,7 +41,7 @@ const NavigationBar = () => {
                             <span className={styles.fontpurple}>Projects</span>
                         </Nav.Link>
                         <Nav.Link>
-                            <ModalCurriculum />
+                            <ModalCurriculum expanded={expanded} setExpanded={setExpanded}  />
                         </Nav.Link>
                         <Nav.Link >
                             {getDarkMode()
@@ -55,7 +51,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         deleteStorageObject('dark-mode')
                                         setTriger(!triger)
-                                        handleLinkClick()                        
+                                        setExpanded(!expanded);                        
                                     }}
                                 />
                                 : <img
@@ -64,7 +60,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         setStorageObject('dark-mode', { 'darkMode': 'yes' })
                                         setTriger(!triger)
-                                        handleLinkClick()                                      
+                                        setExpanded(!expanded);                                      
                                     }}
                                 />
                             }
@@ -77,7 +73,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         deleteStorageObject('idioma')
                                         setTriger(!triger)  
-                                        handleLinkClick()                                 
+                                        setExpanded(!expanded);                                 
                                     }}
                                 />
                                 : <img
@@ -86,7 +82,7 @@ const NavigationBar = () => {
                                     onClick={() => {
                                         setStorageObject('idioma', { 'idioma': 'spain' })
                                         setTriger(!triger)  
-                                        handleLinkClick()                                    
+                                        setExpanded(!expanded);                                    
                                     }}
                                 />
                             }

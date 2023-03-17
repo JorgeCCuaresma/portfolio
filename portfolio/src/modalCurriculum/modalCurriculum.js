@@ -5,11 +5,14 @@ import curriculum2 from '../assets/curriculum2.png'
 import styles from './modalCurriculum.module.css'
 import { getDarkMode, getIdioma } from '../utils/localStorageUtils';
 
-const ModalCurriculum = () => {
+const ModalCurriculum = ({expanded, setExpanded}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () =>{
+         setShow(true)
+         setExpanded(!expanded)
+        };
 
     const downloadPdf = () => {
         const link = document.createElement('a');
