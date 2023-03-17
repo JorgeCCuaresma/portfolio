@@ -16,6 +16,10 @@ z-index: 2;
     width: 24px;
     height:24px;
     margin-bottom: 0.1rem;
+    transition: transform 0.4s ease-in-out;
+}
+.luna:hover{
+    transform: rotate(60deg);
 }
 .fontblack{
     color:black;
@@ -24,9 +28,17 @@ z-index: 2;
     color:white;
     font-weight: bolder;
 }
-.sol{
-   
+.sol{   
     color: white;
+    width: 24px;
+    height:24px;
+    margin-bottom: 0.1rem;
+    transition: transform 0.4s ease-in-out;
+}
+.sol:hover{
+    transform: rotate(60deg);
+}
+.iconIdioma{
     width: 24px;
     height:24px;
     margin-bottom: 0.1rem;

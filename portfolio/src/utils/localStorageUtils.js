@@ -22,3 +22,10 @@ export const setStorageObject = (key, object) => {
     }
     return null;    
   };
+  export const getIdioma = () => {
+    const session = getStorageObject('idioma');
+    if (session) {
+      return session.idioma;
+    }
+    return null;    
+  };

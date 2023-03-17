@@ -49,8 +49,12 @@
 .input{
     margin-bottom: 1rem;   
 }
-
-
+.spanwhite{
+    color:white;
+}
+.span{
+    color:black;
+}
 @keyframes rightleft {
     from {
       transform: translate3d(130%, 0, 0);

@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Spinner from 'react-bootstrap/Spinner';
 import styles from './formularioContacto.module.css'
+import { getDarkMode, getIdioma } from '../../utils/localStorageUtils';
 
 const FormularioContacto = (props) => {
     const [name, setName] = useState("");
@@ -48,7 +49,7 @@ const FormularioContacto = (props) => {
     return (
         <Form ref={form}>
             <Form.Group>
-                <FloatingLabel className={styles.input} controlId="floatingTextarea" label="Name">
+                <FloatingLabel className={styles.input} controlId="floatingTextarea" label={!getIdioma() ? "Name" : "Nombre"}>
                     <Form.Control
                         required
                         name="user_name"
@@ -62,7 +63,7 @@ const FormularioContacto = (props) => {
                 </FloatingLabel>
             </Form.Group>
             <Form.Group >
-                <FloatingLabel className={styles.input} controlId="floatingInput" label="Email adress">
+                <FloatingLabel className={styles.input} controlId="floatingInput" label={!getIdioma() ? "Email adress" : "Correo electrónico"}>
                     <Form.Control
                         required
                         name="user_email"
@@ -76,7 +77,7 @@ const FormularioContacto = (props) => {
                 </FloatingLabel>
             </Form.Group>
             <Form.Group className="mb-3">
-                <FloatingLabel className={styles.inputTextArea} controlId="floatingTextarea2" label="Message">
+                <FloatingLabel className={styles.inputTextArea} controlId="floatingTextarea2" label={!getIdioma() ? "Message" : "Mensaje"}>
                     <Form.Control
                         required
                         name="message"
@@ -98,11 +99,22 @@ const FormularioContacto = (props) => {
                     }
                     sendEmail(e)
                 }}>
-                    {loading ? (<>Sending < Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /></>) : 'Submit'}
+                    {loading && !getIdioma()
+                        ? (<>Sending < Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /></>)
+                        : loading && getIdioma()
+                            ? (<>Enviando < Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /></>)
+                            : !loading && !getIdioma()
+                                ? 'Submit'
+                                : 'Enviar'
+                    }
+
                 </button>
-                {empty && empty}
-                {showNewMessage && response && (<div className={styles.message}>Mensaje enviado</div>)}
-                {showNewMessage && error && (<div className={styles.message}>No se puedo enviar el mensaje</div>)}
+                {getIdioma() && empty && (<div className={getDarkMode()? styles.spanwhite : styles.span}>{empty}</div>)}
+                {!getIdioma() && empty && (<div className={getDarkMode()? styles.spanwhite : styles.span}>There are empty fields</div>)}
+                {getIdioma() && showNewMessage && response && (<div className={styles.message}>Mensaje enviado</div>)}
+                {!getIdioma() && showNewMessage && response && (<div className={styles.message}>Message sent</div>)}
+                {getIdioma() &&showNewMessage && error && (<div className={styles.message}>No se puedo enviar el mensaje</div>)}
+                {!getIdioma() &&showNewMessage && error && (<div className={styles.message}>Can't send the message</div>)}
 
             </div>
         </Form>

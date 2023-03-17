@@ -5,14 +5,14 @@ import styles from './navBar.module.css'
 import ModalCurriculum from '../../modalCurriculum/modalCurriculum';
 import luna from '../../assets/luna.png';
 import sol from '../../assets/sol.png'
-import { deleteStorageObject, getDarkMode, setStorageObject } from '../../utils/localStorageUtils';
-import Contact from '../contact/contact';
-import { useState } from 'react';
+import { deleteStorageObject, getDarkMode, getIdioma, setStorageObject } from '../../utils/localStorageUtils';
+import spain from '../../assets/spain.png';
+import english from '../../assets/english.png'
 import { useDarkModeContext } from '../../context/contextDarkMode';
 
 
 
-const NavigationBar = (props) => {
+const NavigationBar = () => {
     const { triger, setTriger } = useDarkModeContext();
     const simbol = '<'
     const simbol2 = '/>'
@@ -58,6 +58,26 @@ const NavigationBar = (props) => {
                                         setStorageObject('dark-mode', { 'darkMode': 'yes' })
                                         setTriger(!triger)
                                         // props.setReload(!props.reload)
+                                    }}
+                                />
+                            }
+                        </Nav.Link>
+                        <Nav.Link >
+                            {getIdioma()
+                                ? <img
+                                    className={styles.iconIdioma}
+                                    src={english}
+                                    onClick={() => {
+                                        deleteStorageObject('idioma')
+                                        setTriger(!triger)                                   
+                                    }}
+                                />
+                                : <img
+                                    className={styles.iconIdioma}
+                                    src={spain}
+                                    onClick={() => {
+                                        setStorageObject('idioma', { 'idioma': 'spain' })
+                                        setTriger(!triger)                                      
                                     }}
                                 />
                             }
