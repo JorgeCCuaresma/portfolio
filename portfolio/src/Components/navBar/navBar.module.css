@@ -3,6 +3,10 @@
     display: inline;
 z-index: 2;
 }
+.togglerwhite{
+     background-color: #f8f9fa !important;   
+}
+
 .fontpurple{
     color:#8B307F;
     font-weight:lighter;
