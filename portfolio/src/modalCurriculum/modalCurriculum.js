@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import curriculum from '../assets/curriculum.pdf'
 import curriculum2 from '../assets/curriculum2.png'
 import styles from './modalCurriculum.module.css'
-import { getDarkMode } from '../utils/localStorageUtils';
+import { getDarkMode, getIdioma } from '../utils/localStorageUtils';
 
 const ModalCurriculum = () => {
     const [show, setShow] = useState(false);
@@ -41,7 +41,10 @@ const ModalCurriculum = () => {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <button className={styles.button} variant="primary" onClick={downloadPdf}>Download</button>
+                        {!getIdioma()
+                            ?<button className={styles.button} variant="primary" onClick={downloadPdf}>Download</button>
+                            :<button className={styles.button} variant="primary" onClick={downloadPdf}>Descargar</button>                        
+                        }
                     </Modal.Footer>
                 </div>
             </Modal>

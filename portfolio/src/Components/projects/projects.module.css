@@ -64,6 +64,10 @@
 .frase {
     text-align: justify;
 }
+.description h3{
+    border-bottom:1px solid black;
+    color: #8B307F;
+}
 
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
