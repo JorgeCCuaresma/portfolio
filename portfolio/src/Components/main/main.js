@@ -27,7 +27,7 @@ const Main = () => {
                             <h4 className={styles.titleh4}>Jorge Cuesta</h4>
                             {!getIdioma()
                                 ? <h2 className={styles.titleh2}><span className={getDarkMode() ? styles.spanwhite : styles.span}>I'm</span> Full Stack Developer</h2>
-                                : <h2 className={styles.titleh2}><span className={getDarkMode() ? styles.spanwhite : styles.span}>Soy</span> desarrollador Full Stack</h2>
+                                : <h2 className={styles.titleh2esp}><span className={getDarkMode() ? styles.spanwhite : styles.span}>Soy</span> desarrollador Full Stack</h2>
                             }
                         </div>
                         <div className={getDarkMode() ? styles.frasewhite : styles.frase}>
