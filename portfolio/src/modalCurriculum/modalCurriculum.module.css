@@ -34,15 +34,36 @@
     justify-content: center;
    
 }
-.title{
+.headerDark{
     height: 80px;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.26) !important;
+
+
 }
-.title p{
+.header{
+    height: 80px;
+    
+
+
+}
+.headerDark p{
     margin-top: 0.8rem;
     color: #8B307F;
     font-size: 1.8rem;
     font-weight: bolder;
     
+}
+.header p{
+    margin-top: 0.8rem;
+    color: #8B307F;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    
+}
+.footerDark{
+    border-top: 0.5px solid rgba(105, 105, 105, 0.26) !important;
+    
+
 }
 
 @media only screen

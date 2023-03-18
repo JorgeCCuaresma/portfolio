@@ -36,14 +36,14 @@ const ModalCurriculum = ({expanded, setExpanded}) => {
                 centered
             >
                 <div className={getDarkMode() ? styles.cardDark : styles.card}>
-                    <Modal.Header className={styles.title} closeButton>
+                    <Modal.Header  className={getDarkMode() ? styles.headerDark : styles.header} closeButton closeVariant={getDarkMode() ? 'white' : ''}>
                         <Modal.Title><p>Curriculum Vitae Jorge Cuesta</p></Modal.Title>
                     </Modal.Header>
                     <Modal.Body className={styles.body}>
                         <img className={styles.imagen} src={curriculum2}></img>
                     </Modal.Body>
 
-                    <Modal.Footer>
+                    <Modal.Footer className={getDarkMode() ? styles.footerDark : styles.footer}>
                         {!getIdioma()
                             ?<button className={styles.button} variant="primary" onClick={downloadPdf}>Download</button>
                             :<button className={styles.button} variant="primary" onClick={downloadPdf}>Descargar</button>                        
