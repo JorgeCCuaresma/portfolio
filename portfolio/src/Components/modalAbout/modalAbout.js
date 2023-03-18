@@ -24,7 +24,11 @@ function ModalAbout() {
 
             >
                 <div className={getDarkMode() ? styles.cardDark : styles.card} >
-                    <Modal.Header closeButton />
+                    <Modal.Header className={getDarkMode() ? styles.modalHeader : ""} closeButton closeVariant={getDarkMode() ? 'white' : ''} >
+                        {getIdioma()
+                            ? <Modal.Title className={styles.header}>Sobre mi</Modal.Title>
+                            : <Modal.Title className={styles.header}>About me</Modal.Title>}
+                    </Modal.Header>
                     {!getIdioma()
                         ? <Modal.Body className={styles.body}><h5>Hello again 🖖, let me introduce myself, I'm Jorge Cuesta and I'm a junior full stack developer. <br /><br />
                             The projects I have worked on include web development experience using technologies such as HTML, CSS, JavaScript, and libraries such as React, Bootstrap, Socket.io. On the backend, I have worked with Node.js, Express, MongoDB, Mongoose, Insomnia, among others. <br /><br />

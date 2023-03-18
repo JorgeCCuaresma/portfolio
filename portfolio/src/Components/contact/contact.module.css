@@ -39,11 +39,13 @@
     color: white;
     margin-left: 1rem;
     font-weight: bolder;
+   
 }
 .button2:hover{
     background-color: white;
     color: #8B307F;
     border: 0.5px solid #8B307F;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .containerButton{

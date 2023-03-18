@@ -29,7 +29,7 @@ const Contact = () => {
             </div>
             <Offcanvas bg={mode} className={getDarkMode() ? styles.containerDark : styles.container} show={show} placement='end' onHide={handleClose}>
                 <div className={styles.card}>
-                    <Offcanvas.Header closeButton>
+                    <Offcanvas.Header closeButton closeVariant={getDarkMode()?'white' : ''}>
                         {!getIdioma()
                             ? <Offcanvas.Title className={styles.canvasTitle}><p>Contact Me</p></Offcanvas.Title>
                             : <Offcanvas.Title className={styles.canvasTitle}><p>Contáctame</p></Offcanvas.Title>

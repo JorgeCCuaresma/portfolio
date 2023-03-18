@@ -17,8 +17,6 @@ const NavigationBar = () => {
     const { triger, setTriger } = useDarkModeContext();
     const [expanded, setExpanded] = useState(false);
 
-    const simbol = '<'
-    const simbol2 = '/>'
     let mode
     getDarkMode()
         ? mode = 'dark'
@@ -28,7 +26,7 @@ const NavigationBar = () => {
 
         <Navbar fixed='top' collapseOnSelect expanded={expanded} expand="lg" bg={mode} >
             <Container  >
-                <Navbar.Brand href="/"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}>{simbol}Cuaresma {simbol2} </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
+                <Navbar.Brand href="/"><span className={getDarkMode() ? styles.fontwhite : styles.fontblack}> &lt;Cuaresma /&gt; </span><span className={styles.fontpurple}>Developer</span></Navbar.Brand>
                 <Navbar.Toggle  className={getDarkMode() ? styles.togglerwhite : styles.toggler} onClick={()=>setExpanded(!expanded)} aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
