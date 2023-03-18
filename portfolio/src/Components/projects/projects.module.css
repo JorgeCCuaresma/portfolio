@@ -6,32 +6,31 @@
     background-color: #212529;
     color: white;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5rem;
     background-color: #f8f9fa
-
 }
 
 .container h1 {
     color: #8B307F;
-  
+
 
 }
+
 .containerDark h1 {
     color: #8B307F !important;
-    
+
 
 }
 
 .cards {
-
     display: flex;
     align-items: center;
-
-
+    border-top: 0.5px solid rgba(105, 105, 105, 0.26);
 }
 
 .cards video {
@@ -54,7 +53,7 @@
     box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     transition: transform 0.2s ease-in;
-    cursor:context-menu;
+    cursor: context-menu;
 }
 
 .description:hover {
@@ -64,7 +63,8 @@
 .frase {
     text-align: justify;
 }
-.description h3{
+
+.description h3 {
     border-bottom: 0.5px solid rgba(105, 105, 105, 0.26);
     color: #8B307F;
 }
