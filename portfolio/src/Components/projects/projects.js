@@ -3,6 +3,7 @@ import todoApp from '../../assets/todoapp.mp4'
 import skuadLack from '../../assets/skuadlack1.mp4'
 import logoSkuadlack from '../../assets/logoSkuadLack.png'
 import publicChat from '../../assets/publicChat.mp4'
+import movieApp from '../../assets/movieApp.mp4'
 import { getDarkMode, getIdioma } from '../../utils/localStorageUtils'
 import { useDarkModeContext } from '../../context/contextDarkMode'
 
@@ -47,6 +48,34 @@ const Projects = () => {
 
                         }
 
+                    </div>
+
+                </div>
+                <div className={styles.cards}>
+                    <video src={movieApp} type="video/mp4" autoPlay loop muted controls />
+                    <div className={styles.description}>
+                        {!getIdioma()
+                            ? <h3>MovieApp</h3>
+                            : <h3>MovieApp</h3>
+                        }
+                        {getIdioma()
+                            ? <>
+                                <p className={styles.frase}>MovieApp es un app web con la que podremos acceder a cualquier título de cualquier película mediante una busqueda y obtener una lista con los resultados.
+                                    Esta búsqueda apunta a la API de Online Movie Database, que por una query y según el párametro de busqueda obtendremos dichos resultados.
+                                    <br /><br />MovieApp esta desarrollada con ReactJs, Tailwind y TypeScript.
+
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank'>Repositorio</a>
+                            </>
+                            : <>
+                                <p className={styles.frase}>MovieApp is a web app that allows us to access any movie title through a search and obtain a list of results. This search points to the Online Movie Database
+                                    API, which, based on a query and the search parameter, will provide us with these results.
+                                    <br /><br />MovieApp is developed with ReactJs, Tailwind, and TypeScript.
+
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank'>Repository</a>
+                            </>
+                        }
                     </div>
 
                 </div>
