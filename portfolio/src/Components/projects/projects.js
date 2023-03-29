@@ -31,8 +31,8 @@ const Projects = () => {
                                     organizados en backend y frontend, rotando responsabilidades y liderazgo
                                     del proyecto. La metodología usada fué Scrum, con sprints de 15 días y sprints reviews cada final de sprint.
                                 </p>
-                                <a href='https://skuadlack.netlify.app/' target='_blank'>Ir al sitio</a><br />
-                                <a href='https://github.com/nds-fsd/slack' target='_blank'>Repositorio</a>
+                                <a href='https://skuadlack.netlify.app/' target='_blank' rel="noopener noreferrer">Ir al sitio</a><br />
+                                <a href='https://github.com/nds-fsd/slack' target='_blank' rel="noopener noreferrer">Repositorio</a>
                             </>
                             : <>
                                 <p className={styles.frase}>SkuadLack is a clone with its own personality of Slack that allows communication between organizations, with the possibility of creating independent chats
@@ -42,8 +42,8 @@ const Projects = () => {
                                     We worked as a team of 5 people, organized in backend and frontend, rotating responsibilities and project leadership. The methodology used was Scrum, with 15-day sprints
                                     and sprint reviews at the end of each sprint.
                                 </p>
-                                <a href='https://skuadlack.netlify.app/' target='_blank'>Go to the site</a><br />
-                                <a href='https://github.com/nds-fsd/slack' target='_blank'>Repository</a>
+                                <a href='https://skuadlack.netlify.app/' target='_blank' rel="noopener noreferrer">Go to the site</a><br />
+                                <a href='https://github.com/nds-fsd/slack' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
 
                         }
@@ -65,7 +65,7 @@ const Projects = () => {
                                     <br /><br />MovieApp esta desarrollada con ReactJs, Tailwind y TypeScript.
 
                                 </p>
-                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank'>Repositorio</a>
+                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank' rel="noopener noreferrer">Repositorio</a>
                             </>
                             : <>
                                 <p className={styles.frase}>MovieApp is a web app that allows us to access any movie title through a search and obtain a list of results. This search points to the Online Movie Database
@@ -73,7 +73,7 @@ const Projects = () => {
                                     <br /><br />MovieApp is developed with ReactJs, Tailwind, and TypeScript.
 
                                 </p>
-                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank'>Repository</a>
+                                <a href='https://github.com/JorgeCCuaresma/movieApp' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
                         }
                     </div>
@@ -94,8 +94,8 @@ const Projects = () => {
                                     suscrito a dicho evento escuchará y seguidamente se parsea la lista de mensajes, dejando además constancia de estos, de ahí el utilizar bbdd.
 
                                 </p>
-                                <a href='https://skuadlack.netlify.app/' target='_blank'>Visitar sitio</a><br />
-                                <a href='https://github.com/nds-fsd/slack' target='_blank'>Repositorio</a>
+                                <a href='https://skuadlack.netlify.app/' target='_blank' rel="noopener noreferrer">Visitar sitio</a><br />
+                                <a href='https://github.com/nds-fsd/slack' target='_blank' rel="noopener noreferrer">Repositorio</a>
                             </>
                             : <>
                                 <p className={styles.frase}>I developed a small chat demo with websocket connection in the team project. The library used is Socket.io for both front and back-end, and the components are built
@@ -104,8 +104,8 @@ const Projects = () => {
                                     in the database. This is why we use a database.
 
                                 </p>
-                                <a href='https://skuadlack.netlify.app/' target='_blank'>Go to the site</a><br />
-                                <a href='https://github.com/nds-fsd/slack' target='_blank'>Repository</a>
+                                <a href='https://skuadlack.netlify.app/' target='_blank' rel="noopener noreferrer">Go to the site</a><br />
+                                <a href='https://github.com/nds-fsd/slack' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
                         }
                     </div>
@@ -119,12 +119,12 @@ const Projects = () => {
                             ? <>
                                 <p className={styles.frase}>My To-Do App es uno de los primeros retos que desarrolle en el bootcamp, usando para la parte front-end, componentes funcionales mediante ReactJS, y para la parte back-end una pequeña
                                     API REST de ExpressJS, con conexión a un contenedor de docker con bbdd de Mongo y Mongoose como libreria de conexión contra esta.</p>
-                                <a href='https://github.com/JorgeCCuaresma/todoApp' target='_blank'>Repositorio</a>
+                                <a href='https://github.com/JorgeCCuaresma/todoApp' target='_blank' rel="noopener noreferrer">Repositorio</a>
                             </>
                             : <>
                                 <p className={styles.frase}>My To-Do App is one of the first challenges I developed in the bootcamp, using functional components in ReactJS for the front-end and a small ExpressJS REST API for the back-end. It is
                                     connected to a Mongo database container through Docker, and Mongoose is used as the connection library for the database.</p>
-                                <a href='https://github.com/JorgeCCuaresma/todoApp' target='_blank'>Repository</a>
+                                <a href='https://github.com/JorgeCCuaresma/todoApp' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
                         }
                     </div>
