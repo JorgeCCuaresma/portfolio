@@ -22,7 +22,7 @@ const Projects = () => {
                         {getIdioma()
                             ? <>
                                 <p className={styles.frase}>SkuadLack es un clon con personalidad propia de Slack que permite la comunicación entre organizaciones teniendo la posibilidad
-                                    de crear chats independientes dentro de los usuarios de una organización o canales temáticos para diferentes usuarios
+                                    de crear chats independientes dentro de los usuarios de una organización o canales temáticos para diferentes usuarios.
                                     Mediante el sistema de notificaciones y envío de imágenes el usuario tiene las herramientas necesarias para una comunicación fluida y efectiva.<br />
                                     Es un proyecto desarrollado durante el BootCamp en Nuclio Digital School con las siguientes tecnologías HTML, CSS,
                                     JavaScript, ReactJS utilizando librerías como Bootstrap, Socket.io, Cloudinary,  a nivel
