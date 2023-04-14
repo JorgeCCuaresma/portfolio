@@ -4,6 +4,8 @@ import skuadLack from '../../assets/skuadlack1.mp4'
 import logoSkuadlack from '../../assets/logoSkuadLack.png'
 import publicChat from '../../assets/publicChat.mp4'
 import movieApp from '../../assets/movieApp.mp4'
+import translate from '../../assets/translate.mp4'
+
 import { getDarkMode, getIdioma } from '../../utils/localStorageUtils'
 import { useDarkModeContext } from '../../context/contextDarkMode'
 
@@ -15,6 +17,32 @@ const Projects = () => {
         <div className={getDarkMode() ? styles.containerDark : styles.container}>
             <h1>Projects</h1>
             <div className={styles.containerCards}>
+                <div className={styles.cards}>
+                    <video src={translate} type="video/mp4" autoPlay loop muted controls />
+                    <div className={styles.description}>
+                        <h3>Cuaresma Translate</h3>
+                        {getIdioma()
+                            ? <>
+                                <p className={styles.frase}>Cuaresma Translate es un clon de Google Translate.<br /> Las tecnologías utilizadas son ReactJS con Vite y TypeScript, la traducción
+                                    la ejecuta el modelo gpt-3.5-turbo de openAI, los estados son controlados mediante el Hook useReducer de ReactJS y el resultado esta controlado por un Debounce.
+                                    También tiene agregada la funcionalidad para copiar la traducción y escucharla con la pronunciación en su idioma.
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/translate' target='_blank' rel="noopener noreferrer">Repositorio</a>
+                            </>
+                            : <>
+                                <p className={styles.frase}>Cuaresma Translate is a Google Translate clone.<br /> The technologies used are ReactJS with Vite and TypeScript, and the translation is
+                                    executed by the gpt-3.5-turbo model from OpenAI. The states are controlled through the useReducer hook of ReactJS and the result is controlled by a Debounce. It also
+                                    has added functionality to copy the translation and listen to it with the pronunciation in its language.
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/translate' target='_blank' rel="noopener noreferrer">Repository</a>
+                            </>
+
+                        }
+
+                    </div>
+
+                </div>
+
                 <div className={styles.cards}>
                     <video src={skuadLack} type="video/mp4" autoPlay loop muted controls />
                     <div className={styles.description}>
