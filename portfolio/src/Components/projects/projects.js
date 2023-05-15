@@ -6,6 +6,7 @@ import publicChat from '../../assets/publicChat.mp4'
 import movieApp from '../../assets/movieApp.mp4'
 import translate from '../../assets/translate.mp4'
 import redux from '../../assets/crud-ReduxToolkit.mp4'
+import jsQuiz from '../../assets/javascript quiz.mp4'
 
 import { getDarkMode, getIdioma } from '../../utils/localStorageUtils'
 import { useDarkModeContext } from '../../context/contextDarkMode'
@@ -36,6 +37,29 @@ const Projects = () => {
                                     has added functionality to copy the translation and listen to it with the pronunciation in its language.
                                 </p>
                                 <a href='https://github.com/JorgeCCuaresma/translate' target='_blank' rel="noopener noreferrer">Repository</a>
+                            </>
+
+                        }
+
+                    </div>
+
+                </div>
+                <div className={styles.cards}>
+                    <video src={jsQuiz} type="video/mp4" autoPlay loop muted controls />
+                    <div className={styles.description}>
+                        <h3>JavaScript Quiz</h3>
+                        {getIdioma()
+                            ? <>
+                                <p className={styles.frase}>JavaScript Quiz es una app de preguntas y respuestas esta desarrollada con ReactJs y Zustand como libreria de control del estado global.<br />
+
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/javascript-quiz' target='_blank' rel="noopener noreferrer">Repositorio</a>
+                            </>
+                            : <>
+                                <p className={styles.frase}>
+                                JavaScript Quiz is a quiz app developed with ReactJs and Zustand as the global state management library.
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/javascript-quiz' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
 
                         }
