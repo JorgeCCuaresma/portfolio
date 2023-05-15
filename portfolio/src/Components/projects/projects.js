@@ -5,6 +5,7 @@ import logoSkuadlack from '../../assets/logoSkuadLack.png'
 import publicChat from '../../assets/publicChat.mp4'
 import movieApp from '../../assets/movieApp.mp4'
 import translate from '../../assets/translate.mp4'
+import redux from '../../assets/crud-ReduxToolkit.mp4'
 
 import { getDarkMode, getIdioma } from '../../utils/localStorageUtils'
 import { useDarkModeContext } from '../../context/contextDarkMode'
@@ -72,6 +73,33 @@ const Projects = () => {
                                 </p>
                                 <a href='https://skuadlack.netlify.app/' target='_blank' rel="noopener noreferrer">Go to the site</a><br />
                                 <a href='https://github.com/nds-fsd/slack' target='_blank' rel="noopener noreferrer">Repository</a>
+                            </>
+
+                        }
+
+                    </div>
+
+                </div>
+                <div className={styles.cards}>
+                    <video src={redux} type="video/mp4" autoPlay loop muted controls />
+                    <div className={styles.description}>
+                        <h3>Crud React and Redux Toolkit</h3>
+                        {getIdioma()
+                            ? <>
+                                <p className={styles.frase}>Es un pequeño proyecto con la finalidad de crear un CRUD con React y Redux Toolkit.<br />
+                                    Tenemos un estado inicial y unos reducers que efectuaran ciertos cambios en el estado a parte contamos con dos middlewares, uno de ellos guarda cada cambio en el estado en el
+                                    localStorage del navegador para simular la persistencia de datos como si de una BBDD se tratara y el otro nos despliega unas notificaciones en la parte inferior derecha de la
+                                    pagina en cada cambio en el estado. <br /> Como se puede observar al final del video borrando la key guardada en localStorage regresamos al estado inicial de la store.
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/crud-react-redux' target='_blank' rel="noopener noreferrer">Repositorio</a>
+                            </>
+                            : <>
+                                <p className={styles.frase}>
+                                    It is a small project with the purpose of creating a CRUD with React and Redux Toolkit.<br /> We have an initial state and some reducers that will make certain changes to the state. In addition, we have two
+                                    middlewares, one of them saves each change in the state to the browser's localStorage to simulate data persistence as if it were a database, and the other displays notifications in the bottom right of the page
+                                    with each change in the state.<br /> As can be seen at the end of the video, deleting the saved key in localStorage returns us to the initial state of the store.
+                                </p>
+                                <a href='https://github.com/JorgeCCuaresma/crud-react-redux' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
 
                         }
