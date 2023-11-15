@@ -43,7 +43,19 @@
 
 }
 
+.cardsImg {
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2rem;
+    margin-bottom: 2rem;
+    width: 45%;
+    transition: transform 0.2s ease-in;
+}
+
 .cards video:hover {
+    transform: scale(1.02);
+}
+
+.cardsImg:hover {
     transform: scale(1.02);
 }
 
@@ -81,6 +93,10 @@
     }
 
     .cards video {
+        width: 85%;
+    }
+
+    .cardsImg {
         width: 85%;
     }
 }

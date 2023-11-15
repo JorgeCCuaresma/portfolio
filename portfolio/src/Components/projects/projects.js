@@ -7,6 +7,7 @@ import movieApp from '../../assets/movieApp.mp4'
 import translate from '../../assets/translate.mp4'
 import redux from '../../assets/crud-ReduxToolkit.mp4'
 import jsQuiz from '../../assets/javascript quiz.mp4'
+import oralify from '../../assets/oralify.png'
 
 import { getDarkMode, getIdioma } from '../../utils/localStorageUtils'
 import { useDarkModeContext } from '../../context/contextDarkMode'
@@ -19,6 +20,34 @@ const Projects = () => {
         <div className={getDarkMode() ? styles.containerDark : styles.container}>
             <h1>Projects</h1>
             <div className={styles.containerCards}>
+                <div className={styles.cards}>
+                    <img className={styles.cardsImg} src={oralify} alt='oralify' />
+                    <div className={styles.description}>
+                        <h3>Oralify</h3>
+                        {getIdioma()
+                            ? <>
+                                <p className={styles.frase}>Marketplace C2C de consultas perzonalizadas, conectamos expertos con usuarios en cualquier momento y lugar.  ¡Comparte tu experiencia y aprende con Oralify!
+                                    <br />
+                                    <br />
+                                    Backend Developer con experiencia en TypeScript, Node.js y Express.js. Supabase como BBDD y Firebase como gestor de autenticación.
+                                </p>
+                                <a href='https://oralify.com' target='_blank' rel="noopener noreferrer">Sitio web</a>
+                            </>
+                            : <>
+                                <p className={styles.frase}>
+                                    User-Friendly C2C Marketplace for Personalized Consultations, Anytime, Anywhere. Share Expertise & Learn with Oralify!
+                                    <br />
+                                    <br />
+                                    Backend Developer with experience in TypeScript, Node.js, and Express.js. Uses Supabase as the database and Firebase as the authentication manager.
+                                </p>
+                                <a href='https://oralify.com' target='_blank' rel="noopener noreferrer">Web Site</a>
+                            </>
+
+                        }
+
+                    </div>
+
+                </div>
                 <div className={styles.cards}>
                     <video src={translate} type="video/mp4" autoPlay loop muted controls />
                     <div className={styles.description}>
@@ -57,7 +86,7 @@ const Projects = () => {
                             </>
                             : <>
                                 <p className={styles.frase}>
-                                JavaScript Quiz is a quiz app developed with ReactJs and Zustand as the global state management library.
+                                    JavaScript Quiz is a quiz app developed with ReactJs and Zustand as the global state management library.
                                 </p>
                                 <a href='https://github.com/JorgeCCuaresma/javascript-quiz' target='_blank' rel="noopener noreferrer">Repository</a>
                             </>
